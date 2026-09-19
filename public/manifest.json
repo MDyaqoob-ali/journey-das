@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Journey Das",
+  "version": "1.0.0",
+  "description": "7-month C++ DSA + LeetCode interview preparation dashboard with GitHub portfolio sync",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Journey Das",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://leetcode.com/problems/*"],
+      "js": ["content/leetcode/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "alarms",
+    "tabs",
+    "identity",
+    "notifications"
+  ],
+  "host_permissions": [
+    "*://leetcode.com/*",
+    "https://api.github.com/*"
+  ]
+}

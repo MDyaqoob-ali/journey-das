@@ -1,0 +1,65 @@
+[
+  {
+    "category": "DSA Knowledge",
+    "items": [
+      { "id": "dsa-1", "title": "Arrays, strings, hash maps, and hash sets" },
+      { "id": "dsa-2", "title": "Prefix sums, two pointers, and sliding windows" },
+      { "id": "dsa-3", "title": "Sorting and binary search boundaries" },
+      { "id": "dsa-4", "title": "Linked lists, stacks, queues, and deques" },
+      { "id": "dsa-5", "title": "Intervals and greedy scheduling" },
+      { "id": "dsa-6", "title": "Trees, BSTs, and heaps" },
+      { "id": "dsa-7", "title": "Tries and prefix operations" },
+      { "id": "dsa-8", "title": "Graph DFS/BFS, topological sort, and DSU" },
+      { "id": "dsa-9", "title": "Shortest paths (Dijkstra) and Minimum Spanning Trees" },
+      { "id": "dsa-10", "title": "1D, 2D, knapsack, subsequence, string, and grid DP" },
+      { "id": "dsa-11", "title": "Backtracking and recursive decision trees" },
+      { "id": "dsa-12", "title": "Bit manipulation and basic math properties" }
+    ]
+  },
+  {
+    "category": "Pattern Recognition",
+    "items": [
+      { "id": "rec-1", "title": "Infer likely patterns from constraints rather than from topic labels" },
+      { "id": "rec-2", "title": "Distinguish two pointers vs sliding window vs prefix sums immediately" },
+      { "id": "rec-3", "title": "Recognize monotonic stack and binary-search-on-answer situations" },
+      { "id": "rec-4", "title": "Identify when BFS, DFS, Dijkstra, DSU, or topological sorting is appropriate" },
+      { "id": "rec-5", "title": "Define DP state before writing transitions" }
+    ]
+  },
+  {
+    "category": "C++ Implementation",
+    "items": [
+      { "id": "cpp-1", "title": "Use STL containers without searching syntax" },
+      { "id": "cpp-2", "title": "Write custom comparators and lambdas" },
+      { "id": "cpp-3", "title": "Use lower_bound and upper_bound correctly" },
+      { "id": "cpp-4", "title": "Implement DFS, BFS, heap, DSU, and trie from memory" },
+      { "id": "cpp-5", "title": "Code without IDE autocomplete when necessary" }
+    ]
+  },
+  {
+    "category": "Complexity Analysis",
+    "items": [
+      { "id": "comp-1", "title": "State time and auxiliary space before and after coding" },
+      { "id": "comp-2", "title": "Identify dominant loop and data structure bottlenecks" },
+      { "id": "comp-3", "title": "Understand amortized behavior for common STL structures" }
+    ]
+  },
+  {
+    "category": "Interview Communication",
+    "items": [
+      { "id": "comm-1", "title": "Clarify ambiguous requirements and input bounds upfront" },
+      { "id": "comm-2", "title": "Verbalize brute-force approach before optimization" },
+      { "id": "comm-3", "title": "Explain invariants while writing code" },
+      { "id": "comm-4", "title": "Test edge cases aloud (empty, single, negative, duplicates)" },
+      { "id": "comm-5", "title": "Accept interviewer follow-ups and adapt the solution without restarting" }
+    ]
+  },
+  {
+    "category": "Weakness Diagnosis & Simulation",
+    "items": [
+      { "id": "weak-1", "title": "Error log distinguishes knowledge gaps from implementation bugs" },
+      { "id": "weak-2", "title": "Maintained a top-10 weak-problem list and re-solved without notes" },
+      { "id": "weak-3", "title": "Completed at least 6 full mock interview sessions" }
+    ]
+  }
+]

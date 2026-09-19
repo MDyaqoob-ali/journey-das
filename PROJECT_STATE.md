@@ -1,0 +1,76 @@
+# Journey Das — Project State & Context
+
+## Project Overview
+Journey Das is a production-quality Chrome Extension (Manifest V3) implementing a personal 7-month C++ DSA + LeetCode interview-preparation dashboard, automated in-page submission detection, C++ solution extraction, and GitHub portfolio synchronization.
+
+## Completed Components
+- [x] **Project Setup**: `package.json`, `tsconfig.json`, `tailwind.config.js`, `postcss.config.js`
+- [x] **Dependencies**: `idb`, `lucide-react`, `react`, `react-dom`, `vite`, `typescript`, `vitest`, `tailwindcss`
+- [x] **Manifest V3 Specification**: `public/manifest.json`, generated PNG icons `public/icons/icon-16.png`, `48.png`, `128.png`
+- [x] **Data Models & Types**:
+  - `src/types/curriculum.ts`: `CurriculumProblem`, `DailyAssignment`, `WeekPlan`, `MonthPlan`
+  - `src/types/db.ts`: `ProblemProgress`, `AttemptRecord`, `StudySession`, `ReviewItem`, `GithubSyncJob`, `InterviewSessionRecord`, `ErrorLogEntry`, `StlConceptProgress`
+  - `src/types/settings.ts`: `UserSettings`, `GithubSettings`, `StudySettings`, `TimerPreferences`, `DEFAULT_SETTINGS`
+  - `src/types/messages.ts`: Typed contracts for runtime messages across content script, background worker, popup, and dashboard
+- [x] **Curriculum Dataset & Engine**:
+  - Normalized extraction from `curriculum_spec.md` (176 unique core problems, 28 weeks, 196 days)
+  - `src/data/curriculum.json`: Normalized problem database (35 Easy, 118 Medium, 23 Hard)
+  - `src/data/schedule.json`: 359 daily curriculum entries across 28 weeks
+  - `src/data/stl-catalog.json`: 27 C++ STL containers, algorithms & language features
+  - `src/data/monthly-assessments.json`: Months 1-7 milestones & assessment criteria
+  - `src/data/readiness-checklist.json`: 28-item objective interview readiness checklist
+  - `src/curriculum/curriculum.ts`: Problem lookups by ID, slug, number, week, month
+  - `src/curriculum/revision.ts`: Adaptive spaced repetition engine (failure protocol, 48h re-solves, stage intervals)
+  - `src/curriculum/scheduler.ts`: Daily workload balancer, hard cap of $\le 5$ active problems/day, "What should I do now?" engine, streak calculator with rest day preservation
+- [x] **Persistence Layer**:
+  - `src/db/database.ts`: IndexedDB wrapper for 8 object stores
+  - `src/db/settings-storage.ts`: `chrome.storage.local` with fallback
+  - `src/db/backup.ts`: Safe JSON export and import with secret stripping
+- [x] **GitHub Portfolio Integration**:
+  - `src/github/auth.ts`: PKCE OAuth (`chrome.identity`) + PAT fallback, token verification
+  - `src/github/api.ts`: GitHub REST API client, repo verification, SHA retrieval, file commit, path & README generators
+  - `src/github/sync-queue.ts`: Offline queue, concurrency lock, retry logic with exponential backoff
+- [x] **LeetCode Page Integration**:
+  - `src/content/leetcode/adapters/problem-adapter.ts`: URL pathname, DOM title, and catalog slug matching
+  - `src/content/leetcode/adapters/solution-adapter.ts`: Monaco editor model & submission DOM code extractor, language detector
+  - `src/content/leetcode/adapters/submission-adapter.ts`: MutationObserver for Accepted/Wrong Answer, runtime, memory, submission ID
+  - `src/content/leetcode/ui/FloatingTracker.tsx`: Non-intrusive collapsible HUD, timer, status badges, failure protocol modal
+  - `src/content/leetcode/content.ts`: Content script entry point
+- [x] **Background Service Worker**:
+  - `src/background/service-worker.ts`: Message router, attempt logger, sync queue trigger, periodic alarms, badge updater, Chrome notifications
+- [x] **Popup Interface**:
+  - `popup.html`, `src/popup/index.tsx`, `src/popup/Popup.tsx`
+- [x] **Dashboard Application**:
+  - `dashboard.html`, `src/index.css`, `src/dashboard/Dashboard.tsx`, `src/dashboard/index.tsx`
+  - `src/dashboard/components/Navbar.tsx`
+  - `src/dashboard/components/ResultModal.tsx`
+  - `src/dashboard/components/TodayTab.tsx`
+  - `src/dashboard/components/OverviewTab.tsx`
+  - `src/dashboard/components/CurriculumTab.tsx`
+  - `src/dashboard/components/RevisionTab.tsx`
+  - `src/dashboard/components/InterviewTab.tsx`
+  - `src/dashboard/components/AnalyticsTab.tsx`
+  - `src/dashboard/components/MistakesTab.tsx`
+  - `src/dashboard/components/StlTab.tsx`
+  - `src/dashboard/components/GithubTab.tsx`
+  - `src/dashboard/components/ReadinessTab.tsx`
+  - `src/dashboard/components/SettingsTab.tsx`
+- [x] **Test Suite & Verification**:
+  - `src/tests/curriculum.test.ts` (5 tests)
+  - `src/tests/scheduler.test.ts` (4 tests)
+  - `src/tests/revision.test.ts` (4 tests)
+  - `src/tests/leetcode-adapters.test.ts` (2 tests)
+  - `src/tests/github-queue.test.ts` (2 tests)
+  - `src/tests/catalog-readiness.test.ts` (3 tests)
+  - `src/tests/backup.test.ts` (1 test)
+  - Total: **21 passing unit tests** across 7 test suites
+- [x] **Documentation**:
+  - `README.md`: Quick start, installation, Chrome loading steps, developer commands
+  - `docs/curriculum-validation.md`: Curriculum verification report
+  - `docs/redundancy-audit.md`: Spaced repetition & workload invariant audit
+  - `docs/architecture.md`: System design, Manifest V3 constraints, service worker lifecycle
+  - `docs/github-sync.md`: GitHub OAuth PKCE, PAT fallback, commit format, offline retry queue
+  - `docs/leetcode-integration.md`: MutationObserver, Monaco extractor, URL matching
+  - `docs/curriculum-system.md`: 7-month curriculum, spaced repetition, failure protocol
+- [x] **Production Bundle**:
+  - Bundled in `dist/` ready to load into Chrome (`chrome://extensions` -> Load unpacked).

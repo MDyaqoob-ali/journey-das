@@ -1,0 +1,87 @@
+[
+  {
+    "monthNumber": 1,
+    "weeks": [1, 2, 3, 4],
+    "title": "Month 1 — Foundations: Arrays, Hashing, Two Pointers, Sliding Window, Prefix Sums",
+    "skillsExpected": [
+      "Recognize basic linear patterns",
+      "Solve Easy in ~15–20 minutes",
+      "Solve common Medium in ~25–35 minutes",
+      "Master vector, string, unordered_map, sort"
+    ],
+    "assessmentTarget": "Two mixed Mediums in 70 minutes + 20-minute concept recall without notes",
+    "remedyAction": "Keep the weakest two patterns in next week's review queue and reduce new learning until stable."
+  },
+  {
+    "monthNumber": 2,
+    "weeks": [5, 6, 7, 8],
+    "title": "Month 2 — Linear Structures & Pointer Manipulation: Intervals, Stacks, Linked Lists, Binary Search",
+    "skillsExpected": [
+      "Implement pointer/stack/search invariants without templates",
+      "Understand monotonic stack for nearest greater/smaller queries",
+      "Fast/slow pointer linked list transformations"
+    ],
+    "assessmentTarget": "Two Mediums in 70 minutes: one linked list and one binary search problem",
+    "remedyAction": "Keep the weakest two patterns in next week's review queue and reduce new learning until stable."
+  },
+  {
+    "monthNumber": 3,
+    "weeks": [9, 10, 11, 12],
+    "title": "Month 3 — Search Optimization & Dynamic Programming Foundations",
+    "skillsExpected": [
+      "Define DP states and binary-search boundaries independently",
+      "Recognize 1D, knapsack, grid, and string DP state transitions",
+      "Implement binary search on answer space"
+    ],
+    "assessmentTarget": "Three mixed problems in 100 minutes (at least one must be a DP problem)",
+    "remedyAction": "Keep the weakest two patterns in next week's review queue and reduce new learning until stable."
+  },
+  {
+    "monthNumber": 4,
+    "weeks": [13, 14, 15, 16],
+    "title": "Month 4 — Recursion, Backtracking & Trees/BST",
+    "skillsExpected": [
+      "Write recursion cleanly with proper base cases and backtracking cleanup",
+      "Distinguish DFS vs BFS vs BST invariants",
+      "Solve tree diameter, path sums, LCA, and serialization"
+    ],
+    "assessmentTarget": "Two Mediums + one selected Hard in 120 minutes",
+    "remedyAction": "Keep the weakest two patterns in next week's review queue and reduce new learning until stable."
+  },
+  {
+    "monthNumber": 5,
+    "weeks": [17, 18, 19, 20],
+    "title": "Month 5 — Advanced Structures & Graphs: Heaps, Tries, Graphs, DSU, Shortest Paths",
+    "skillsExpected": [
+      "Model problems as graphs from verbal descriptions",
+      "Choose correct traversal (BFS vs DFS vs Dijkstra vs DSU vs Topo Sort)",
+      "Implement DSU and Trie from blank file"
+    ],
+    "assessmentTarget": "Three mixed Mediums in 100 minutes",
+    "remedyAction": "Keep the weakest two patterns in next week's review queue and reduce new learning until stable."
+  },
+  {
+    "monthNumber": 6,
+    "weeks": [21, 22, 23, 24],
+    "title": "Month 6 — Advanced DP, Greedy & Blind Pattern Recognition",
+    "skillsExpected": [
+      "Solve problems without being told the topic label",
+      "Recover from failed first approaches under time pressure",
+      "Master state-machine and interval DP"
+    ],
+    "assessmentTarget": "Two Mediums in 75 minutes + one Hard/Hard-variant in 45 minutes",
+    "remedyAction": "Keep the weakest two patterns in next week's review queue and reduce new learning until stable."
+  },
+  {
+    "monthNumber": 7,
+    "weeks": [25, 26, 27, 28],
+    "title": "Month 7 — Interview Simulation, OA Speed & Final Polish",
+    "skillsExpected": [
+      "Communicate approach clearly, code, test, optimize, and handle follow-ups under pressure",
+      "Complete OA timed sets with 100% test case pass rate",
+      "Handle interviewer edge case challenges and modify code in-place"
+    ],
+    "assessmentTarget": "Full mock interview + timed OA set + final weak-area audit",
+    "remedyAction": "Identify final 5 weak problems and perform blank-file re-implementations."
+  }
+]

@@ -74,3 +74,5 @@ Journey Das is a production-quality Chrome Extension (Manifest V3) implementing 
   - `docs/curriculum-system.md`: 7-month curriculum, spaced repetition, failure protocol
 - [x] **Production Bundle**:
   - Bundled in `dist/` ready to load into Chrome (`chrome://extensions` -> Load unpacked).
+- [x] **Remote Repository**:
+  - Pushed to GitHub: [https://github.com/MDyaqoob-ali/journey-das](https://github.com/MDyaqoob-ali/journey-das) (Branch: `main`).
